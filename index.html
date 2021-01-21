@@ -69,6 +69,73 @@
                 </section>
 
 
+                <section data-background-video="vid/repository.mp4"
+          data-background-video-loop data-background-video-muted data-background-size="contain">
+                </section>
+                <section data-background-video="vid/cards.mp4"
+          data-background-video-loop data-background-video-muted data-background-size="contain">
+                </section>
+                <section data-background-video="vid/terminal.mp4"
+          data-background-video-loop data-background-video-muted data-background-size="contain">
+                </section>
+                <section>
+                    <h2>Staging</h2>
+                    <img src="img/staging.png" width="50%">
+                </section>
+                <section data-background-video="vid/terminal-git.mp4"
+          data-background-video-loop data-background-video-muted data-background-size="contain">
+                </section>
+                <section data-background-video="vid/remote.mp4"
+          data-background-video-loop data-background-video-muted data-background-size="contain">
+                </section>
+                <section>
+                    <h2>Level Format</h2>
+                     <pre><code data-trim data-noescape>
+                        title = Working together
+                        cards = clone checkout commit-auto pull push
+
+                        [description]
+                        "A friend has asked you to help with an essay about hobbies!
+                        She has already started to write a list, and started
+                        tracking it with her own time machine!"
+
+                        [congrats]
+                        "Thanks, these are some really nice hobbies!
+                        Hope we can do that together soon!"
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>Level Format</h2>
+                     <pre><code data-trim data-noescape>
+                        [setup]
+
+                        rm -rf .git
+
+                        [setup friend]
+
+                        echo "~ Best hobbies ~" > hobbies.txt
+                        git add .
+                        git commit -m "Initial version"
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>Level Format</h2>
+                     <pre><code data-trim data-noescape>
+                        [win]
+
+                        # Add at least two more lines to hobbies.txt
+                        test "$(cat hobbies.txt |wc -l)" -ge 6
+
+                        # Commit your result.
+                        test "$(git show main:hobbies.txt |wc -l)" -ge 6
+
+                        [win friend]
+
+                        # And use `git push` to send it to your friend!
+                        test "$(git show main:hobbies.txt |wc -l)" -ge 6
+                    </code></pre>
+                </section>
+
 
 
                 <section>
